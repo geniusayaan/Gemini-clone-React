@@ -11,13 +11,18 @@ const ContextProvider = (props)=>{
     const [prevprompts,setprevprompts]=useState()
     const [showresult,setshowresult]=useState(false)
     const [recentprompts,setrecentprompts]=useState()
+  
 
     const onSent= async (prompt)=>{
         setshowresult(true)
         const response = await run(prompt)
+
         setresult([...results, response]);
+
         setprevprompts(prompt)
+
         setprompt("")
+        
       }
     
     const contextvalue ={
@@ -31,7 +36,8 @@ const ContextProvider = (props)=>{
         showresult,
         setshowresult,
         recentprompts,
-        setrecentprompts
+        setrecentprompts,
+        
 
     }
     return(

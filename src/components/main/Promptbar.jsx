@@ -1,6 +1,5 @@
 import React, { useState } from 'react'
-import { Context } from '../../context/context'
-
+import { IoIosSend } from "react-icons/io";
 
 
 
@@ -8,9 +7,24 @@ const Promptbar = (props) => {
  const {prompt,setprompt,onSent}= props
  
   return (
-    <div>
-      <input type="text" className='outline-none text-[15px] pl-5 p-4 w-[700px] rounded-full bg-[#333537] text-white' placeholder='Ask Gemini' value={prompt} onChange={(e)=>setprompt(e.target.value)}/><button onClick={()=>onSent(prompt)}>sned</button>
-    </div>
+   
+      <div className='flex items-center justify-center'>
+        <form onSubmit={(e)=>{
+          e.preventDefault()
+          onSent(prompt)}}>
+        <label className='relative'>
+      <input type="text" className='outline-none text-[15px] pl-5 p-[18px] w-[720px] rounded-full bg-[#333537] text-white' placeholder='Ask Gemini' value={prompt} onChange={(e)=>setprompt(e.target.value)}/>
+
+
+
+      <button className='absolute top-0 right-4 center h-full'><IoIosSend className='text-white text-2xl'/>
+      </button>
+
+      </label>
+      </form>
+   
+      </div>
+    
   )
 }
 

@@ -6,7 +6,7 @@ const Main = () => {
   const {onSent,setprompt,prompt,results,prevprompts,showresult,recentprompts} = useContext(Context)
   return (
     <div className='flex flex-col bg-[#1E1F20] items-center justify-between h-full w-full'>
-    <div className='h-20 w-full p-8 flex justify-end items-center'>
+    <div className='h-12 w-full p-8 flex justify-end items-center'>
 
       <div className='flex w-9 h-9'>
         <img src="/jobs.jpg" className='w-full h-full rounded-full object-cover' />

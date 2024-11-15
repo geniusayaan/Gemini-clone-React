@@ -1,11 +1,16 @@
-/** @type {import('tailwindcss').Config} */
+// tailwind.config.js
+import scrollbarHide from 'tailwind-scrollbar-hide'; // Import the plugin
+
 export default {
-  content: [
-    "./index.html",
-    "./src/**/*.{js,ts,jsx,tsx}",
-  ],
+  content: ['./src/**/*.{js,jsx,ts,tsx}'], // Adjust based on your project
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        scrollbarThumb: '#5a5a5a',
+        scrollbarThumbHover: '#7a7a7a',
+        scrollbarTrack: '#2d2d2d',
+      },
   },
-  plugins: [],
+},
+  plugins: [scrollbarHide],
 }
