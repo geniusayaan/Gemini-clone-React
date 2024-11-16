@@ -8,7 +8,7 @@ import Prompts from './Prompts';
 const Sidebar = () => {
   const [extend,setextend] = useState(false)
   return (
-    <div className={`flex flex-col transition-all bg-[#333]  justify-between h-full p-3 ${!extend?"w-16":"w-56"} ${extend?"items-start":"items-center"}`}>
+    <div className={`flex  flex-col transition-all bg-[#333]  justify-between h-full p-3 ${!extend?"w-16":"w-56"} ${extend?"items-start":"items-center"}`}>
 
         
 

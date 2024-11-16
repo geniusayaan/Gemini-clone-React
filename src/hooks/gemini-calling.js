@@ -28,7 +28,7 @@ import {
     });
   
     const result = await chatSession.sendMessage(prompt);
-    const response = result.response.text()
+    const response =  result.response.text()
     return response
   }
   

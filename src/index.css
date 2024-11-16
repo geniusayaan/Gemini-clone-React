@@ -29,3 +29,26 @@
 .custom-scrollbar::-webkit-scrollbar-thumb:hover {
   background: #7a7a7a; 
 }
+
+.anime hr{
+  background: linear-gradient(to right,skyblue,skyblue,white,skyblue,skyblue);
+  animation: loadinganime 0.8s linear infinite;
+}
+
+@keyframes loadinganime{
+  0%{
+    background: linear-gradient(to right,white,skyblue,skyblue,skyblue,skyblue);
+  }
+  25%{
+    background: linear-gradient(to right,skyblue,white,skyblue,skyblue,skyblue);
+  }
+  50%{
+    background: linear-gradient(to right,skyblue,skyblue,white,skyblue,skyblue);
+  }
+  75%{
+    background: linear-gradient(to right,skyblue,skyblue,skyblue,white,skyblue);
+  }
+  100%{
+    background: linear-gradient(to right,skyblue,skyblue,skyblue,skyblue,white);
+  }
+}
